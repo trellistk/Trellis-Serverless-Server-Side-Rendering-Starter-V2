@@ -1,0 +1,19 @@
+service: trellis-sls-ssr-starter-v2
+frameworkVersion: '3'
+
+	
+plugins:
+  - serverless-offline
+
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  index:
+    handler: functions/index.handler
+    events:
+      - http:
+          method: get
+          path: /

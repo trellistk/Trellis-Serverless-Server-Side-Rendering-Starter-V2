@@ -1,0 +1,23 @@
+name: Run Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  buildAndTest:
+    name: Build and test the pull request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      - name: Install API Dependencies
+        run: npm i
+
+      - name: Install Serverless dependencies
+        uses: serverless/github-action@v3
+
+      - name: Check lint
+        run: npm run lint

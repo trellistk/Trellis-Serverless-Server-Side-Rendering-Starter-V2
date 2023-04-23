@@ -1,0 +1,14 @@
+{
+  "name": "trellis-sls-ssr-starter-v2",
+  "scripts": {
+    "lint": "standard",
+    "start-local": "sls offline"
+  },
+  "devDependencies": {
+    "serverless-offline": "^12.0.4",
+    "standard": "^17.0.0"
+  },
+  "dependencies": {
+    "simple-sls-ssr": "^1.3.1"
+  }
+}
